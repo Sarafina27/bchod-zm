@@ -10,17 +10,17 @@ import FloatingContactBtn from "@/components/FloatingContactBtn";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Stats />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-      <FloatingContactBtn />
-    </div>
+    <div className="min-h-screen bg-background text-foreground">
+  <Navbar />
+  <Hero />
+  <section className="py-16"><Services /></section>
+  <section className="py-16 bg-muted"><Stats /></section>
+  <section className="py-16"><About /></section>
+  <section className="py-16 bg-accent text-accent-foreground"><Projects /></section>
+  <section className="py-16"><Contact /></section>
+  <Footer />
+  <FloatingContactBtn />
+</div>
   );
 };
 
