@@ -66,52 +66,52 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 bg-background relative z-10 overflow-hidden">
-      <div className="w-full">
-        <div className="max-w-7xl mx-auto px-6 mb-16">
-          <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">What We Do</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Our Services</h2>
-            <p className="text-muted-foreground">Scroll to explore • Click to learn more</p>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+        <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+          What We Do
+        </p>
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-slide-in-left">
+          Our Services
+        </h2>
+        <p className="text-muted-foreground">Scroll to explore • Click to learn more</p>
+      </div>
 
-        {/* Infinite scrolling container */}
-        <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide w-full">
-          <motion.div
-            className="flex gap-4 min-w-max"
-            animate={{ x: [-1920, 0] }}
-            transition={{
-              duration: 60,
-              repeat: Infinity,
-              ease: "linear",
-              repeatType: "loop",
-            }}
-          >
-            {extendedServices.map((s, idx) => {
-              const Icon = s.icon;
-              return (
-                <motion.div
-                  key={`${s.id}-${idx}`}
-                  className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl cursor-pointer transition-shadow duration-300 bg-card border border-border"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  onClick={() => setSelectedService(s)}
-                >
-                  <div className="h-32 flex items-center justify-center bg-muted">
-                    <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-card text-foreground">
-                      <Icon size={40} />
-                    </div>
+      {/* Infinite scrolling container */}
+      <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide w-full">
+        <motion.div
+          className="flex gap-4 min-w-max"
+          animate={{ x: [-1920, 0] }}
+          transition={{
+            duration: 60,
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+          }}
+        >
+          {extendedServices.map((s, idx) => {
+            const Icon = s.icon;
+            return (
+              <motion.div
+                key={`${s.id}-${idx}`}
+                className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden bg-card border border-border shadow hover:shadow-lg cursor-pointer transition-shadow duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                onClick={() => setSelectedService(s)}
+              >
+                <div className="h-32 flex items-center justify-center bg-muted">
+                  <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-background text-foreground shadow">
+                    <Icon size={40} />
                   </div>
-                  <div className="h-40 flex flex-col items-center justify-center p-6 text-center">
-                    <h3 className="text-2xl font-serif font-bold text-foreground">{s.title}</h3>
-                    <div className="mt-4 h-1 w-8 rounded-full bg-primary" />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
+                </div>
+                <div className="h-40 flex flex-col items-center justify-center p-6 text-center">
+                  <h3 className="text-2xl font-serif font-bold text-foreground">{s.title}</h3>
+                  <div className="mt-4 h-1 w-8 rounded-full bg-primary" />
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
 
       {/* Modal Popup */}

@@ -17,6 +17,9 @@
   --border: 240 5% 90%;
   --input: 240 5% 90%;
   --ring: 220 90% 56%;
+  --card: 0 0% 100%; /* solid white */
+  --card-foreground: 0 0% 10%; /* dark text */
+
 }
 
 .dark {
@@ -83,7 +86,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
 .bg-hero-overlay {
   background: rgba(0,0,0,0.5); /* semi-transparent black overlay */
+}
+
+.text-gradient {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
