@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Zap, Construction, Cog, ClipboardCheck } from "lucide-react";
 
 interface Service {
   id: number;
   title: string;
   description: string;
   fullDescription: string;
-  icon: typeof Building2;
-  gradient: string;
+  image: string; // <-- new field
 }
 
 const services: Service[] = [
@@ -18,8 +16,7 @@ const services: Service[] = [
     description: "End-to-end project planning, coordination and delivery.",
     fullDescription:
       "Our project management services ensure seamless coordination across all phases of your project. We manage timelines, budgets, resources, and stakeholder communication to deliver results on time and within scope.",
-    icon: ClipboardCheck,
-    gradient: "from-[hsl(var(--section-dark))] via-[hsl(var(--muted-foreground))] to-[hsl(var(--primary))]",
+    image: "/images/eng.png",
   },
   {
     id: 2,
@@ -27,8 +24,7 @@ const services: Service[] = [
     description: "Infrastructure design & site works — roads, drainage, earthworks.",
     fullDescription:
       "We design and oversee civil infrastructure projects including highways, drainage systems, earthworks, and public utilities. Our expertise spans feasibility studies, detailed design, and construction supervision.",
-    icon: Construction,
-    gradient: "from-[hsl(var(--primary))] to-[hsl(var(--secondary))]",
+    image: "/images/eng.png",
   },
   {
     id: 3,
@@ -36,8 +32,7 @@ const services: Service[] = [
     description: "HVAC, plant equipment, and mechanical systems design.",
     fullDescription:
       "From HVAC system design to mechanical plant and equipment installation, we provide comprehensive mechanical engineering solutions. Our focus is on efficiency, reliability, and cost-effectiveness.",
-    icon: Cog,
-    gradient: "from-[hsl(var(--secondary))] to-[hsl(var(--primary))]",
+    image: "/images/eng.png",
   },
   {
     id: 4,
@@ -45,8 +40,7 @@ const services: Service[] = [
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
       "Our structural engineers design safe, cost-effective solutions for buildings and bridges. We conduct detailed analysis, create construction documents, and provide on-site supervision.",
-    icon: Building2,
-    gradient: "from-[hsl(var(--secondary))] to-[hsl(var(--primary))]",
+    image: "/images/eng.png",
   },
   {
     id: 5,
@@ -54,8 +48,7 @@ const services: Service[] = [
     description: "Power systems, distribution design and electrical safety.",
     fullDescription:
       "We design electrical systems for power distribution, lighting, fire safety, and communications. Our solutions meet all regulatory standards and best practices for safety and efficiency.",
-    icon: Zap,
-    gradient: "from-[hsl(var(--accent))] to-[hsl(var(--primary))]",
+    image: "/images/eng.png",
   },
 ];
 
@@ -76,7 +69,7 @@ const Services = () => {
         <p className="text-muted-foreground">Scroll to explore • Click to learn more</p>
       </div>
 
-      {/* Infinite scrolling container */}
+      {/* Scrolling container */}
       <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide w-full">
         <motion.div
           className="flex gap-4 min-w-max"
@@ -88,33 +81,33 @@ const Services = () => {
             repeatType: "loop",
           }}
         >
-          {extendedServices.map((s, idx) => {
-            const Icon = s.icon;
-            return (
-              <motion.div
-                key={`${s.id}-${idx}`}
-                className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden bg-card border border-border shadow hover:shadow-lg cursor-pointer transition-shadow duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                onClick={() => setSelectedService(s)}
-              >
-                <div className="h-32 flex items-center justify-center bg-muted">
-                  <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-background text-foreground shadow">
-                    <Icon size={40} />
-                  </div>
-                </div>
-                <div className="h-40 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-2xl font-serif font-bold text-foreground">{s.title}</h3>
-                  <div className="mt-4 h-1 w-8 rounded-full bg-primary" />
-                </div>
-              </motion.div>
-            );
-          })}
+          {extendedServices.map((s, idx) => (
+            <motion.div
+              key={`${s.id}-${idx}`}
+              className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden bg-card border border-border shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              onClick={() => setSelectedService(s)}
+            >
+              {/* Cover image */}
+              <img
+                src={s.image}
+                alt={s.title}
+                className="h-32 w-full object-cover"
+              />
+
+              {/* Card content */}
+              <div className="h-40 flex flex-col items-center justify-center p-6 text-center">
+                <h3 className="text-2xl font-serif font-bold text-foreground">{s.title}</h3>
+                <div className="mt-4 h-1 w-8 rounded-full bg-primary" />
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
 
-      {/* Modal Popup */}
+      {/* Modal popup */}
       <AnimatePresence>
         {selectedService && (
           <motion.div
@@ -132,26 +125,16 @@ const Services = () => {
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={`bg-gradient-to-br ${selectedService.gradient} p-8 relative`}>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-primary-foreground/20 hover:bg-primary-foreground/40 rounded-full text-primary-foreground transition"
-                >
-                  ×
-                </button>
-                {(() => {
-                  const Icon = selectedService.icon;
-                  return (
-                    <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-primary-foreground/25 text-primary-foreground mb-4">
-                      <Icon size={40} />
-                    </div>
-                  );
-                })()}
-                <h2 className="text-3xl font-serif font-bold text-primary-foreground">
+              {/* Image at top of modal */}
+              <img
+                src={selectedService.image}
+                alt={selectedService.title}
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-8">
+                <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
                   {selectedService.title}
                 </h2>
-              </div>
-              <div className="p-8">
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                   {selectedService.fullDescription}
                 </p>

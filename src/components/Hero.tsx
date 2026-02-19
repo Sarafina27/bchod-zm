@@ -35,11 +35,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-6 text-foreground animate-count-up">
+          <h1 className="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-6 text-white animate-count-up">
             Engineering{" "}
-            <span className="text-gradient">Excellence</span>
+            <span className="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-6 text-white animate-count-up">
+              Excellence
+            </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
+          <p className="text-lg md:text-xl text-white/80 mb-8">
             Practical engineering solutions across civil, structural, mechanical
             and electrical disciplines — delivered with precision.
           </p>

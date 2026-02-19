@@ -6,21 +6,21 @@ const projects = [
     title: "Lusaka Highway Extension",
     desc: "Major infrastructure project spanning 50+ km with modern design standards",
     tag: "Civil",
-    gradient: "from-[hsl(var(--primary))] to-[hsl(var(--secondary))]",
+    image: "/images/lusaka-highway-ext.JPG", // <-- add your image path here
   },
   {
     id: 2,
     title: "Commercial District Development",
     desc: "Multi-purpose commercial complex with cutting-edge structural engineering",
     tag: "Structural",
-    gradient: "from-[hsl(var(--secondary))] to-[hsl(var(--primary))]",
+    image: "/images/levy-junction.jpg",
   },
   {
     id: 3,
     title: "National Power Grid Upgrade",
     desc: "State-of-the-art electrical systems for national power distribution",
     tag: "Electrical",
-    gradient: "from-[hsl(var(--accent))] to-[hsl(var(--primary))]",
+    image: "/images/national-power-grid.webp",
   },
 ];
 
@@ -52,8 +52,12 @@ const Projects = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
             >
-              {/* Gradient banner */}
-              <div className={`h-40 bg-gradient-to-br ${p.gradient}`} />
+              {/* Cover image */}
+              <img
+                src={p.image}
+                alt={p.title}
+                className="h-40 w-full object-cover"
+              />
 
               {/* Card content */}
               <div className="p-6">
