@@ -45,11 +45,11 @@ const Contact = () => {
             </p>
             <div className="bg-card p-6 rounded-lg shadow border border-border">
               <h3 className="font-serif font-semibold text-foreground mb-2">Office</h3>
-              <p className="text-muted-foreground text-sm">Lusaka, Zambia</p>
+              <p className="text-muted-foreground text-sm">Plot #41, Mulungushi Road, Roma, Lusaka, Zambia</p>
             </div>
             <div className="bg-card p-6 rounded-lg shadow border border-border">
               <h3 className="font-serif font-semibold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm">info@bchodzambia.com</p>
+              <p className="text-muted-foreground text-sm">hq@bchodzam.com.zm</p>
             </div>
           </div>
 

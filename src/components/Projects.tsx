@@ -60,24 +60,21 @@ const Projects = () => {
               />
 
               {/* Card content */}
+              {/* Card content */}
               <div className="p-6">
                 <span className="inline-block text-xs font-semibold text-primary-foreground bg-primary px-3 py-1 rounded-full mb-3">
                   {p.tag}
                 </span>
-                <h3 className="text-lg font-serif font-bold text-foreground mb-2">
-                  {p.title}
-                </h3>
+                <h3 className="text-lg font-serif font-bold text-foreground mb-2">{p.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
+
+                {/* View project button */}
                 <a
                   className="inline-flex items-center text-primary font-semibold hover:underline text-sm"
-                  href="#"
+                  href={`/projects/${p.id}`}
                 >
                   View project
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
+                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M5 12h14M13 5l7 7-7 7"
                       stroke="currentColor"
