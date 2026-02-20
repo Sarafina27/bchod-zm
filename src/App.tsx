@@ -5,8 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Projects from "./components/Projects";       // <-- import your Projects page
-import { ProjectDetail } from "./components/ProjectDetail"; // <-- new detail page
+import Projects from "./components/Projects";
+import { ProjectDetail } from "./components/ProjectDetail";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+
+// Import from components folder
+import Contact from "./components/Contact";
+import Services from "./components/Services";
+import About from "./components/About"; // if you create an About component
 
 const queryClient = new QueryClient();
 
@@ -16,18 +23,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* Navbar always visible */}
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Index />} />
-
-          {/* Projects listing */}
           <Route path="/projects" element={<Projects />} />
-
-          {/* Individual project detail */}
           <Route path="/projects/:id" element={<ProjectDetail />} />
-
-          {/* Catch-all */}
+          <Route path="/contact" element={<Contact />} />     {/* new */}
+          <Route path="/services" element={<Services />} />   {/* new */}
+          <Route path="/about" element={<About />} />         {/* optional */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        {/* Footer always visible */}
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
