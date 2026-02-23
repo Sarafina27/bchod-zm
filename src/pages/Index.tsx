@@ -18,7 +18,7 @@ const Index = () => {
   <section className="py-16"><About /></section>
   <section className="py-16 bg-accent text-accent-foreground"><Projects /></section>
   <section className="py-16"><Contact /></section>
-  <Footer />
+  
   <FloatingContactBtn />
 </div>
   );

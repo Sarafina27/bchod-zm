@@ -1,91 +1,80 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     id: 1,
-    title: "Lusaka Highway Extension",
-    desc: "Major infrastructure project spanning 50+ km with modern design standards",
-    tag: "Civil",
-    image: "/images/lusaka-highway-ext.JPG", // <-- add your image path here
+    title: "T002 Lusaka to Chirundu Escarpment Rehabilitation",
+    description:
+      "Rehabilitation and widening of 34.7km including bridge construction and pavement strengthening.",
+    image: "/images/lusaka-highway-ext.JPG",
   },
   {
     id: 2,
-    title: "Commercial District Development",
-    desc: "Multi-purpose commercial complex with cutting-edge structural engineering",
-    tag: "Structural",
+    title: "Mixed-Use Commercial Development",
+    description:
+      "Multi-purpose commercial complex with cutting-edge structural engineering.",
     image: "/images/levy-junction.jpg",
   },
   {
     id: 3,
-    title: "National Power Grid Upgrade",
-    desc: "State-of-the-art electrical systems for national power distribution",
-    tag: "Electrical",
-    image: "/images/national-power-grid.webp",
+    title: "UT003 Dual Carriageway – Kitwe to Chingola (45km)",
+    description:
+      "Rehabilitation and upgrading to dual carriageway standard including bridge construction.",
+    image: "/images/T3-road.JPG",
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-24 bg-muted">
       <div className="container mx-auto px-6">
-        {/* Section header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
           <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
             Our Work
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground animate-slide-in-left">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
             Featured Projects
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Selected works demonstrating our approach and delivery capability.
-          </p>
-        </div>
+        </motion.div>
 
-        {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {projects.map((p, i) => (
-            <motion.article
-              key={p.id}
-              className="rounded-xl overflow-hidden bg-card border border-border shadow-md hover:shadow-lg transition-all"
-              initial={{ opacity: 0, y: 12 }}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map((project, i) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="bg-card rounded-lg shadow-lg overflow-hidden border border-border flex flex-col"
             >
-              {/* Cover image */}
               <img
-                src={p.image}
-                alt={p.title}
-                className="h-40 w-full object-cover"
+                src={project.image}
+                alt={project.title}
+                className="h-48 w-full object-cover"
               />
-
-              {/* Card content */}
-              {/* Card content */}
-              <div className="p-6">
-                <span className="inline-block text-xs font-semibold text-primary-foreground bg-primary px-3 py-1 rounded-full mb-3">
-                  {p.tag}
-                </span>
-                <h3 className="text-lg font-serif font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
-
-                {/* View project button */}
-                <a
-                  className="inline-flex items-center text-primary font-semibold hover:underline text-sm"
-                  href={`/projects/${p.id}`}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold text-primary mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {project.description}
+                </p>
+                {/* Push button to bottom */}
+                <Link
+                  to={`/projects/${project.id}`}
+                  className="mt-auto inline-block w-full text-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition"
                 >
-                  View project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M5 12h14M13 5l7 7-7 7"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+                  View Details
+                </Link>
+
               </div>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
       </div>

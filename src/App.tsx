@@ -10,6 +10,7 @@ import { ProjectDetail } from "./components/ProjectDetail";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
+
 // Import from components folder
 import Contact from "./components/Contact";
 import Services from "./components/Services";

@@ -16,7 +16,7 @@ const services: Service[] = [
     description: "End-to-end project planning, coordination and delivery.",
     fullDescription:
       "Our project management services ensure seamless coordination across all phases of your project. We manage timelines, budgets, resources, and stakeholder communication to deliver results on time and within scope.",
-    image: "/images/eng.png",
+    image: "/images/Mvuvye bridge survey-Eastern Zambia.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const services: Service[] = [
     description: "Infrastructure design & site works — roads, drainage, earthworks.",
     fullDescription:
       "We design and oversee civil infrastructure projects including highways, drainage systems, earthworks, and public utilities. Our expertise spans feasibility studies, detailed design, and construction supervision.",
-    image: "/images/eng.png",
+    image: "/images/civileng.JPG",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const services: Service[] = [
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
       "Our structural engineers design safe, cost-effective solutions for buildings and bridges. We conduct detailed analysis, create construction documents, and provide on-site supervision.",
-    image: "/images/eng.png",
+    image: "/images/structure.JPG",
   },
   {
     id: 5,

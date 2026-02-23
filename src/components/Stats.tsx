@@ -20,7 +20,7 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
           setStarted(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -29,7 +29,7 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
   useEffect(() => {
     if (!started) return;
     let current = 0;
-    const step = Math.ceil(target / 40);
+    const step = Math.max(1, Math.ceil(target / 50));
     const timer = setInterval(() => {
       current += step;
       if (current >= target) {
@@ -43,7 +43,10 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
   }, [started, target]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-serif font-bold text-primary-foreground">
+    <div
+      ref={ref}
+      className="text-5xl md:text-6xl font-serif font-bold text-gray-900"
+    >
       {count}
       {suffix}
     </div>
@@ -52,8 +55,8 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
 
 const Stats = () => {
   return (
-    <section className="py-20 bg-section-dark relative overflow-hidden">
-      {/* Decorative */}
+    <section className="py-20 bg-white relative overflow-hidden">
+      {/* Decorative background glow */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/10 blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -63,8 +66,10 @@ const Stats = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-glow mb-3">Our Track Record</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-section-dark-foreground">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            Our Track Record
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900">
             At the Forefront of Engineering Innovation
           </h2>
         </motion.div>
@@ -80,7 +85,7 @@ const Stats = () => {
               className="text-center"
             >
               <CountUp target={stat.value} suffix={stat.suffix} />
-              <p className="mt-2 text-sm font-medium text-section-dark-foreground/60 uppercase tracking-wide">
+              <p className="mt-2 text-sm font-medium text-gray-600 uppercase tracking-wide">
                 {stat.label}
               </p>
             </motion.div>
