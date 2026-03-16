@@ -24,7 +24,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'url("https://bchodzimbabwe.co.zw/wp-content/uploads/2021/07/webhome2_128.jpg")',
+            'url("https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg")',
         }}
       />
       {/* Overlay */}
