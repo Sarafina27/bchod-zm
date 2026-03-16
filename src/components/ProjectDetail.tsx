@@ -21,13 +21,13 @@ const projects = [
   },
  {
   id: 3,
-  title: "T003 Dual Carriageway – Kitwe to Chingola (45km)",
-  desc: "Rehabilitation and upgrading to dual carriageway standard including bridge construction",
-  tag: "Civil",
-  image: "/images/T3-road.JPG",
+  title: "Rehabilitation & Extension of Water Supply and Sewerage Systems – Western Province",
+  desc: "Upgrading and expansion of urban water and wastewater infrastructure across multiple towns",
+  tag: "Water & Sanitation",
+  image: "/images/western-water.jpg",
   fullDescription:
-    "This project involved the rehabilitation and upgrading of approximately 45km of the T003 road between Kitwe and Chingola into a dual carriageway standard. The works included pavement strengthening, base stabilization, asphalt surfacing, drainage improvements, and the construction of a new bridge at Mwambashi River near Sabina Junction on the southbound lane. The project significantly improved traffic flow, safety, and connectivity within the Copperbelt region and formed part of Zambia’s strategic road infrastructure enhancement programme."
-},
+    "This project involved the rehabilitation, upgrading, and expansion of water supply and sewerage infrastructure in the towns of Mongu, Kaoma, Senanga, Sesheke, Kalabo, Limulunga, and Namushakende in Western Province. The scope of works included refurbishment of intake structures and treatment facilities, installation of new transmission pipelines, construction of storage reservoirs, upgrading of distribution networks, and implementation of pressure management systems. Sewerage components comprised rehabilitation and extension of sewer networks, pump station upgrades, and improvements to wastewater treatment systems to ensure environmental compliance. The project significantly enhanced access to safe potable water, improved wastewater management, reduced system losses, and strengthened public health and sanitation standards within the targeted urban and peri-urban communities."
+}
 ];
 
 export function ProjectDetail() {
@@ -58,7 +58,7 @@ export function ProjectDetail() {
             Read about more projects
           </h2>
           <a
-            href="/files/BCHOD_Full_Project_Portfolio.pdf" // place your PDF in public/files/
+            href="/files/BCHOD_Projects.pdf" // place the  PDF in public/files/
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary font-semibold hover:underline text-sm"

@@ -42,15 +42,15 @@ const About = () => {
             {/* Partners PDF section */}
             <div className="mt-8 border-t pt-6">
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Learn more about our partners
+                Learn more about us...
               </h3>
               <a
-                href="/files/BCHOD_Partners.pdf"
+                href="/files/BCHOD-company-profile.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition"
               >
-                View Partners PDF
+                View Firm profile
               </a>
             </div>
           </div>

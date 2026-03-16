@@ -40,7 +40,7 @@ const services: Service[] = [
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
       "Our structural engineers design safe, cost-effective solutions for buildings and bridges. We conduct detailed analysis, create construction documents, and provide on-site supervision.",
-    image: "/images/structure.JPG",
+    image: "/images/structure.jpeg",
   },
   {
     id: 5,

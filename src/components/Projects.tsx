@@ -18,10 +18,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "UT003 Dual Carriageway – Kitwe to Chingola (45km)",
+    title: "Rehabilitation & Extension of Water Supply and Sewerage Systems – Western Province",
     description:
-      "Rehabilitation and upgrading to dual carriageway standard including bridge construction.",
-    image: "/images/T3-road.JPG",
+      "Upgrading and expansion of urban water and wastewater infrastructure across multiple towns",
+    image: "/images/western-water.jpg",
   },
 ];
 
