@@ -21,34 +21,50 @@ const services: Service[] = [
   {
     id: 2,
     title: "Civil Engineering",
-    description: "Infrastructure design & site works — roads, drainage, earthworks.",
+    description: "Design and construction of infrastructure: roads, bridges, buildings, and water systems.",
     fullDescription:
-      "We design and oversee civil infrastructure projects including highways, drainage systems, earthworks, and public utilities. Our expertise spans feasibility studies, detailed design, and construction supervision.",
+      "Licensed civil engineers delivering reliable solutions across Zambia and the sub-region. Services span feasibility studies, detailed design, construction support, and post-construction lifecycle management. Outcomes: safe, robust, compliant, and cost-effective infrastructure tailored to client needs.",
     image: "/images/civileng.JPG",
   },
   {
     id: 3,
-    title: "Mechanical Engineering",
-    description: "HVAC, plant equipment, and mechanical systems design.",
-    fullDescription:
-      "From HVAC system design to mechanical plant and equipment installation, we provide comprehensive mechanical engineering solutions. Our focus is on efficiency, reliability, and cost-effectiveness.",
-    image: "/images/eng.png",
-  },
-  {
-    id: 4,
     title: "Structural Engineering",
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
-      "Our structural engineers design safe, cost-effective solutions for buildings and bridges. We conduct detailed analysis, create construction documents, and provide on-site supervision.",
+      "Expertise across residential, commercial, industrial, mining, and resource projects. Provision of engineering designs, full documentation, and detailed construction inspections. Solutions are state-of-the-art, robust, and tailored to client requirements. Focus: fit-for-use structures that meet safety, compliance, and performance standards.",
     image: "/images/structure.jpeg",
   },
   {
-    id: 5,
-    title: "Electrical Engineering",
-    description: "Power systems, distribution design and electrical safety.",
+    id: 4,
+    title: "Geotechnical Engineering",
+    description: "Soil, foundation, and ground stability expertise.",
     fullDescription:
-      "We design electrical systems for power distribution, lighting, fire safety, and communications. Our solutions meet all regulatory standards and best practices for safety and efficiency.",
+      "Comprehensive capability from desk studies to field investigations. Services include geotechnical reporting, interpretation, stability analysis, and foundation assessment. Design and supervision of geotechnical solutions ensuring safe and reliable ground conditions. Team includes geologists, hydrogeologists, and geotechnical experts.",
+    image: "/images/geotech.jpg",
+  },
+  {
+    id: 5,
+    title: "Electrical & Mechanical Engineering",
+    description: "Power systems, machinery, and mechanical systems design.",
+    fullDescription:
+      "Installation and maintenance of electrical systems, machinery, and mechanical equipment. Solutions designed for reliability, usability, and compliance with engineering standards. Services cover design, implementation, and ongoing operational support.",
     image: "/images/eng.png",
+  },
+  {
+    id: 6,
+    title: "Environmental, Health & Safety",
+    description: "Sustainable development and workforce wellbeing.",
+    fullDescription:
+      "Ensuring projects protect the environment and maintain safe, healthy working conditions. Services include environmental impact assessments, safety audits, and compliance monitoring. Focus: sustainable development and safeguarding workforce wellbeing.",
+    image: "/images/environment.jpg",
+  },
+  {
+    id: 7,
+    title: "Geomatic & Surveying",
+    description: "Professional surveying and geospatial expertise for land, engineering, and hydrographic projects.",
+    fullDescription:
+      "We provide accurate, reliable, and cost-effective survey solutions. Our clients include landowners, developers, government agencies, engineers, architects, and utility companies. Deliverables: trusted geospatial data supporting planning, design, and construction.",
+    image: "/images/survey.jpg",
   },
 ];
 
@@ -81,7 +97,7 @@ const Services = () => {
             repeatType: "loop",
           }}
         >
-          {extendedServices.map((s, idx) => (
+          {extendedServices.map((7, idx) => (
             <motion.div
               key={`${s.id}-${idx}`}
               className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden bg-card border border-border shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
@@ -150,7 +166,7 @@ const Services = () => {
                     onClick={() => setSelectedService(null)}
                     className="flex-1 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition text-center"
                   >
-                    Get Quote
+                    Contact us!
                   </a>
                 </div>
               </div>
