@@ -6,7 +6,7 @@ interface Service {
   title: string;
   description: string;
   fullDescription: string;
-  image: string; // <-- new field
+  image: string;
 }
 
 const services: Service[] = [
@@ -20,7 +20,7 @@ const services: Service[] = [
   },
   {
     id: 2,
-    title: "Civil Engineering",
+    title: "Civil Engineering Services",
     description: "Design and construction of infrastructure: roads, bridges, buildings, and water systems.",
     fullDescription:
       "Licensed civil engineers delivering reliable solutions across Zambia and the sub-region. Services span feasibility studies, detailed design, construction support, and post-construction lifecycle management. Outcomes: safe, robust, compliant, and cost-effective infrastructure tailored to client needs.",
@@ -28,7 +28,7 @@ const services: Service[] = [
   },
   {
     id: 3,
-    title: "Structural Engineering",
+    title: "Structural Engineering Services",
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
       "Expertise across residential, commercial, industrial, mining, and resource projects. Provision of engineering designs, full documentation, and detailed construction inspections. Solutions are state-of-the-art, robust, and tailored to client requirements. Focus: fit-for-use structures that meet safety, compliance, and performance standards.",
@@ -36,7 +36,7 @@ const services: Service[] = [
   },
   {
     id: 4,
-    title: "Geotechnical Engineering",
+    title: "Geotechnical Engineering Services",
     description: "Soil, foundation, and ground stability expertise.",
     fullDescription:
       "Comprehensive capability from desk studies to field investigations. Services include geotechnical reporting, interpretation, stability analysis, and foundation assessment. Design and supervision of geotechnical solutions ensuring safe and reliable ground conditions. Team includes geologists, hydrogeologists, and geotechnical experts.",
@@ -44,7 +44,7 @@ const services: Service[] = [
   },
   {
     id: 5,
-    title: "Electrical & Mechanical Engineering",
+    title: "Electrical & Mechanical Engineering Services",
     description: "Power systems, machinery, and mechanical systems design.",
     fullDescription:
       "Installation and maintenance of electrical systems, machinery, and mechanical equipment. Solutions designed for reliability, usability, and compliance with engineering standards. Services cover design, implementation, and ongoing operational support.",
@@ -52,7 +52,7 @@ const services: Service[] = [
   },
   {
     id: 6,
-    title: "Environmental, Health & Safety",
+    title: "Environmental, Health & Safety Services",
     description: "Sustainable development and workforce wellbeing.",
     fullDescription:
       "Ensuring projects protect the environment and maintain safe, healthy working conditions. Services include environmental impact assessments, safety audits, and compliance monitoring. Focus: sustainable development and safeguarding workforce wellbeing.",
@@ -60,7 +60,7 @@ const services: Service[] = [
   },
   {
     id: 7,
-    title: "Geomatic & Surveying",
+    title: "Geomatic & Surveying Services",
     description: "Professional surveying and geospatial expertise for land, engineering, and hydrographic projects.",
     fullDescription:
       "We provide accurate, reliable, and cost-effective survey solutions. Our clients include landowners, developers, government agencies, engineers, architects, and utility companies. Deliverables: trusted geospatial data supporting planning, design, and construction.",
@@ -97,7 +97,7 @@ const Services = () => {
             repeatType: "loop",
           }}
         >
-          {extendedServices.map((7, idx) => (
+          {extendedServices.map((s, idx) => (
             <motion.div
               key={`${s.id}-${idx}`}
               className="flex-shrink-0 w-80 h-72 rounded-2xl overflow-hidden bg-card border border-border shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
