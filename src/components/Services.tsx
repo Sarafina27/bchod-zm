@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 interface Service {
   id: number;
@@ -20,7 +22,7 @@ const services: Service[] = [
   },
   {
     id: 2,
-    title: "Civil Engineering Services",
+    title: "Civil Engineering",
     description: "Design and construction of infrastructure: roads, bridges, buildings, and water systems.",
     fullDescription:
       "Licensed civil engineers delivering reliable solutions across Zambia and the sub-region. Services span feasibility studies, detailed design, construction support, and post-construction lifecycle management. Outcomes: safe, robust, compliant, and cost-effective infrastructure tailored to client needs.",
@@ -28,7 +30,7 @@ const services: Service[] = [
   },
   {
     id: 3,
-    title: "Structural Engineering Services",
+    title: "Structural Engineering",
     description: "Robust structural solutions for buildings and bridges.",
     fullDescription:
       "Expertise across residential, commercial, industrial, mining, and resource projects. Provision of engineering designs, full documentation, and detailed construction inspections. Solutions are state-of-the-art, robust, and tailored to client requirements. Focus: fit-for-use structures that meet safety, compliance, and performance standards.",
@@ -36,7 +38,7 @@ const services: Service[] = [
   },
   {
     id: 4,
-    title: "Geotechnical Engineering Services",
+    title: "Geotechnical Engineering",
     description: "Soil, foundation, and ground stability expertise.",
     fullDescription:
       "Comprehensive capability from desk studies to field investigations. Services include geotechnical reporting, interpretation, stability analysis, and foundation assessment. Design and supervision of geotechnical solutions ensuring safe and reliable ground conditions. Team includes geologists, hydrogeologists, and geotechnical experts.",
@@ -44,7 +46,7 @@ const services: Service[] = [
   },
   {
     id: 5,
-    title: "Electrical & Mechanical Engineering Services",
+    title: "Electrical & Mechanical Engineering",
     description: "Power systems, machinery, and mechanical systems design.",
     fullDescription:
       "Installation and maintenance of electrical systems, machinery, and mechanical equipment. Solutions designed for reliability, usability, and compliance with engineering standards. Services cover design, implementation, and ongoing operational support.",
@@ -52,7 +54,7 @@ const services: Service[] = [
   },
   {
     id: 6,
-    title: "Environmental, Health & Safety Services",
+    title: "Environmental, Health & Safety",
     description: "Sustainable development and workforce wellbeing.",
     fullDescription:
       "Ensuring projects protect the environment and maintain safe, healthy working conditions. Services include environmental impact assessments, safety audits, and compliance monitoring. Focus: sustainable development and safeguarding workforce wellbeing.",
@@ -60,7 +62,7 @@ const services: Service[] = [
   },
   {
     id: 7,
-    title: "Geomatic & Surveying Services",
+    title: "Geomatic & Surveying",
     description: "Professional surveying and geospatial expertise for land, engineering, and hydrographic projects.",
     fullDescription:
       "We provide accurate, reliable, and cost-effective survey solutions. Our clients include landowners, developers, government agencies, engineers, architects, and utility companies. Deliverables: trusted geospatial data supporting planning, design, and construction.",
@@ -161,13 +163,14 @@ const Services = () => {
                   >
                     Close
                   </button>
-                  <a
-                    href="#contact"
-                    onClick={() => setSelectedService(null)}
-                    className="flex-1 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition text-center"
-                  >
-                    Contact us!
-                  </a>
+                  <Link
+  to="/contact"
+  onClick={() => setSelectedService(null)}
+  className="flex-1 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition text-center"
+>
+  Contact us!
+</Link>
+
                 </div>
               </div>
             </motion.div>
