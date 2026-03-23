@@ -13,9 +13,9 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
   <Navbar />
   <Hero />
-  <section className="py-16"><Services /></section>
-  <section className="py-16 bg-muted"><Stats /></section>
   <section className="py-16"><About /></section>
+  <section className="py-16 bg-muted"><Stats /></section>
+  <section className="py-16"><Services /></section>
   <section className="py-16 bg-accent text-accent-foreground"><Projects /></section>
   <section className="py-16"><Contact /></section>
   

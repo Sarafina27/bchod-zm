@@ -22,10 +22,11 @@ const Hero = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            'url("https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg")',
-        }}
+       style={{
+  backgroundImage: 'url("/images/hero.png")',
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-hero-overlay" />
