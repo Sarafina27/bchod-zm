@@ -11,17 +11,19 @@ const About = () => {
           About BCHOD Zambia
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
-          
+
           {/* Image instead of gradient */}
           <img
             src="/images/bchod-building.png"
             alt="About BCHOD Zambia"
-           
+
           />
 
           <div>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              BCHOD Zambia is a multidisciplinary engineering consultancy delivering practical, sustainable and
+              BRIAN COLQUHOUN, HUGH O'DONNELL AND PARTNERS
+              (BCHOD) is an African firm of Consulting Engineers operating
+              in the region since 1948. BCHOD Zambia delivers practical, sustainable and
               cost-effective solutions across civil, structural, mechanical and electrical projects.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">

@@ -66,7 +66,7 @@ const services: Service[] = [
     description: "Professional surveying and geospatial expertise for land, engineering, and hydrographic projects.",
     fullDescription:
       "We provide accurate, reliable, and cost-effective survey solutions. Our clients include landowners, developers, government agencies, engineers, architects, and utility companies. Deliverables: trusted geospatial data supporting planning, design, and construction.",
-    image: "/images/survey.jpg",
+    image: "/images/civil.jpg",
   },
 ];
 

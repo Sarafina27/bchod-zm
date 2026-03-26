@@ -22,7 +22,7 @@ const Navbar = () => {
           <img
             src="/images/bchod-logo.png" // <-- place your logo file in public/images
             alt="BCHOD Zambia Logo"
-            className="h-12 w-auto"       // adjust size as needed
+            className="h-[70px] w-auto"       // adjust size as needed
           />
         </Link>
 
