@@ -42,7 +42,7 @@ const services: Service[] = [
     description: "Soil, foundation, and ground stability expertise.",
     fullDescription:
       "Comprehensive capability from desk studies to field investigations. Services include geotechnical reporting, interpretation, stability analysis, and foundation assessment. Design and supervision of geotechnical solutions ensuring safe and reliable ground conditions. Team includes geologists, hydrogeologists, and geotechnical experts.",
-    image: "/images/geotech.jpg",
+    image: "/images/geotech.png",
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const services: Service[] = [
     description: "Sustainable development and workforce wellbeing.",
     fullDescription:
       "Ensuring projects protect the environment and maintain safe, healthy working conditions. Services include environmental impact assessments, safety audits, and compliance monitoring. Focus: sustainable development and safeguarding workforce wellbeing.",
-    image: "/images/environment.jpg",
+    image: "/images/clearing.png",
   },
   {
     id: 7,
