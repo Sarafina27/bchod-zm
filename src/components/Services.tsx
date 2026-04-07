@@ -25,7 +25,7 @@ const services: Service[] = [
     title: "Civil Engineering",
     description: "Design and construction of infrastructure: roads, bridges, buildings, and water systems.",
     fullDescription:
-      "Licensed civil engineers delivering reliable solutions across Zambia and the sub-region. Services span feasibility studies, detailed design, construction support, and post-construction lifecycle management. Outcomes: safe, robust, compliant, and cost-effective infrastructure tailored to client needs.",
+      "Civil engineering services covering the design and construction of infrastructure such as roads, bridges, buildings, and water systems. Solutions are grounded in proven engineering standards and practical knowledge of Zambia and the region, delivering outcomes that are safe, compliant, and cost-effective. Services span the full project lifecycle, from feasibility and detailed design to construction support and post-construction throughout the structure’s design life.",
     image: "/images/civileng.JPG",
   },
   {
@@ -49,8 +49,8 @@ const services: Service[] = [
     title: "Electrical & Mechanical Engineering",
     description: "Power systems, machinery, and mechanical systems design.",
     fullDescription:
-      "Installation and maintenance of electrical systems, machinery, and mechanical equipment. Solutions designed for reliability, usability, and compliance with engineering standards. Services cover design, implementation, and ongoing operational support.",
-    image: "/images/eng.png",
+      "The team provides systems and solutions that ensure installation and maintenance of electrical systems, machinery, and mechanical equipment is of sound and real usable nature.",
+    image: "/images/pumps.jpg",
   },
   {
     id: 6,

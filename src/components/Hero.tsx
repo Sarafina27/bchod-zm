@@ -34,14 +34,14 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-80 h-80 bg-primary opacity-10 rounded-full blur-3xl -mr-40 -mt-40" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6">
+         <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-6 text-white animate-count-up">
-            Engineering{" "}
-            <span className="text-4xl md:text-6xl font-serif font-extrabold leading-tight mb-6 text-white animate-count-up">
-              Excellence
-            </span>
+          <h1 className="text-7xl md:text-9xl lg:text-[9rem] font-serif font-extrabold leading-tight tracking-widest uppercase mb-3 text-purple-300">
+            BCHOD
           </h1>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6">
+            Engineering Excellence
+          </h2>
           <p className="text-lg md:text-xl text-white/80 mb-8">
             Practical engineering solutions across civil, structural, mechanical
             and electrical disciplines — delivered with precision.
