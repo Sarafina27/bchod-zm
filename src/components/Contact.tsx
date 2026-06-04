@@ -26,7 +26,7 @@ const Contact = () => {
 
      emailjs
       .send(
-        "service_8qtewas",   // from EmailJS dashboard
+        "service_5oyupcd",   // from EmailJS dashboard
         "template_hvksxah",  // from EmailJS dashboard
         {
           user_name: form.name,

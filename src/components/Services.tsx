@@ -17,7 +17,7 @@ const services: Service[] = [
     title: "Project Management",
     description: "End-to-end project planning, coordination and delivery.",
     fullDescription:
-      "Our project management services ensure seamless coordination across all phases of your project. We manage timelines, budgets, resources, and stakeholder communication to deliver results on time and within scope.",
+      "Our project management services ensure seamless coordination across all phases of your project. We manage timelines, budgets, resources, and stakeholder communication to deliver results on time and within scope, cost effectively and fit for purpose.",
     image: "/images/Mvuvye bridge survey-Eastern Zambia.jpg",
   },
   {
