@@ -76,29 +76,30 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <section id="services" className="py-24 bg-background relative z-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
-          What We Do
-        </p>
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-slide-in-left">
-          Our Services
-        </h2>
-        <p className="text-muted-foreground">Scroll to explore • Click to learn more</p>
-      </div>
+    <section id="services" className="py-24 bg-background relative overflow-hidden">
+      <div className="relative z-20">
+        <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            What We Do
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 animate-slide-in-left">
+            Our Services
+          </h2>
+          <p className="text-muted-foreground">Scroll to explore • Click to learn more</p>
+        </div>
 
-      {/* Scrolling container */}
-      <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide w-full">
-        <motion.div
-          className="flex gap-4 min-w-max"
-          animate={{ x: [-1920, 0] }}
-          transition={{
-            duration: 60,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop",
-          }}
-        >
+        {/* Scrolling container */}
+        <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide w-full relative z-20">
+          <motion.div
+            className="flex gap-4 min-w-max"
+            animate={{ x: [-1920, 0] }}
+            transition={{
+              duration: 60,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            }}
+          >
           {extendedServices.map((s, idx) => (
             <motion.div
               key={`${s.id}-${idx}`}
@@ -124,6 +125,7 @@ const Services = () => {
           ))}
         </motion.div>
       </div>
+    </div>
 
       {/* Modal popup */}
       <AnimatePresence>

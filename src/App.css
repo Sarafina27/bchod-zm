@@ -48,10 +48,5 @@ body {
 }
 
 body {
-  background-image: url("/watermark.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; /* keeps it stagnant */
-  background-size: contain;     /* or "cover" depending on effect */
-  opacity: 0.1;                 /* makes it faint */
+  background-color: transparent;
 }

@@ -23,23 +23,28 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        {/* Navbar always visible */}
-        <Navbar />
+      <div className="relative">
+        <div className="pointer-events-none fixed inset-0 z-10 bg-[url('/images/watermark.png')] bg-center bg-no-repeat bg-contain bg-fixed opacity-25" />
+        <div className="relative">
+          <BrowserRouter>
+            {/* Navbar always visible */}
+            <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-          <Route path="/contact" element={<Contact />} />     {/* new */}
-          <Route path="/services" element={<Services />} />   {/* new */}
-          <Route path="/about" element={<About />} />         {/* optional */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectDetail />} />
+              <Route path="/contact" element={<Contact />} />     {/* new */}
+              <Route path="/services" element={<Services />} />   {/* new */}
+              <Route path="/about" element={<About />} />         {/* optional */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
 
-        {/* Footer always visible */}
-        <Footer />
-      </BrowserRouter>
+            {/* Footer always visible */}
+            <Footer />
+          </BrowserRouter>
+        </div>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );
