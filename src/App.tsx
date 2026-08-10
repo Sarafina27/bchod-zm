@@ -24,7 +24,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <div className="relative">
-        <div className="pointer-events-none fixed inset-0 z-10 bg-[url('/images/watermark.png')] bg-center bg-no-repeat bg-contain bg-fixed opacity-25" />
         <div className="relative">
           <BrowserRouter>
             {/* Navbar always visible */}
