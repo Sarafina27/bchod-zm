@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bchodeng/public_html/
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - npm ci
+    - npm run build
+    - /bin/cp -R dist/. $DEPLOYPATH
