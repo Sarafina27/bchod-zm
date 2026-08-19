@@ -31,9 +31,9 @@ const projects = [
 const featuredGallery = [
   {
     id: 1,
-    title: "Construction Supervision of the New Administration Building",
+    title: "Construction Supervision of LEVY JUNCTION",
     description:
-      "Construction supervision of the new administration building in Lusaka.",
+      "Construction supervision of LEVY JUNCTION in Lusaka.",
     image: "/images/IMG_2387.JPG",
   },
   {
@@ -52,10 +52,45 @@ const featuredGallery = [
   },
   {
     id: 4,
-    title: "Highway Rehabilitation and Expansion",
+    title: "Borehole Drilling and Ground Water Development",
     description:
-      "Modernising strategic transport corridors through durable engineering works.",
-    image: "/images/lusaka-highway-ext.JPG",
+      "Site drilling works as part of the development of a reliable ground water system.",
+    image: "/images/borehole1.JPG",
+  },
+  {
+    id: 5,
+    title: "Bridge Corridor Maintenance and Strengthening",
+    description:
+      "Maintenance and strengthening of the Mukuku/Tuta Bridge corridor to ensure structural integrity.",
+    image: "/images/bridge1.jpg",
+  },
+  {
+    id: 6,
+    title: "Roads Construction works",
+    description:
+      "Construction and improvement of road infrastructure to support safe reliable and efficient acces to various parts of the country for economic, social and environmental benefits.",
+    image: "/images/road2.JPG",
+  },
+   {
+    id: 7,
+    title: "David Kaunda STEM School Laboratory Construction",
+    description:
+      "Construction of a modern STEM laboratory to enhance educational facilities.",
+    image: "/images/DK_STEM_LAB1.jpg",
+  },
+  {
+    id: 8,
+    title: "Inside of the David Kaunda STEM School Laboratory",
+    description:
+      "This project was completed with a grant aid from the people of Japan as a token of friendship and cooperation between Japan and Zambia.",
+    image: "/images/DK_STEM_LAB2.jpg",
+  },
+  {
+    id: 9,
+    title: "Inside of the David Kaunda STEM School Laboratory",
+    description:
+      "The lounge area of the lab.",
+    image: "/images/DK_STEM_LAB4.jpg",
   },
 ];
 
