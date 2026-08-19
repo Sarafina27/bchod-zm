@@ -76,21 +76,21 @@ const featuredGallery = [
     title: "David Kaunda STEM School Laboratory Construction",
     description:
       "Construction of a modern STEM laboratory to enhance educational facilities.",
-    image: "/images/DK_STEM_LAB1.jpg",
+    image: "/images/DK_STEM_LAB1.jpeg",
   },
   {
     id: 8,
     title: "Inside of the David Kaunda STEM School Laboratory",
     description:
       "This project was completed with a grant aid from the people of Japan as a token of friendship and cooperation between Japan and Zambia.",
-    image: "/images/DK_STEM_LAB2.jpg",
+    image: "/images/DK_STEM_LAB2.jpeg",
   },
   {
     id: 9,
     title: "Inside of the David Kaunda STEM School Laboratory",
     description:
       "The lounge area of the lab.",
-    image: "/images/DK_STEM_LAB4.jpg",
+    image: "/images/DK_STEM_LAB4.jpeg",
   },
 ];
 
